@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Filtering with SQL quiries</h1>
+					</div>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">SQL Quiries</a></li>
+							<li><a href="https://xmagnum2001.github.io/my-portfolio/"> Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="#">Sql Quiries</a></h2>
+									<p>I worked on this project as part of my Google Cybersecurity Professional Certificate. I was introduced to SQL operators such as: <code>AND, OR, LIKE, NOT</code>to filter an employee database. The first three examples are used to investigate login attempts. The last three examples are used to monitor devices that need system updates. </p>
+									<p>Note: This data is fictional and provided by Google on Coursera.</p>
+								</header>
+								</article>
+								<!-- Step 1 -->
+										<article class="post featured">
+											<P><h3>Retrieve after hours failed login attempts</h3></P>
+											<a class="image main"><img src="images/sql-img01.png" alt="" /></a>
+											<p> I used <code>SELECT *</code> to get all results within my specified parameters in the next 2 lines.<br /> <code>FROM log_in_attempts</code> is used to retrieve the login attempts made matching the next set of parameters. <br /> <code>WHERE login_time > '18:00:00'</code> is used to filter down to login attempts made after hours. <br /><code>AND success = 0;</code> is used to filter for only failed log in attempts.</p>
+										</article>
+								<!-- Step 2 -->
+										<article class="post featured">
+											<p><h3>Retrieve login attempts on specific dates</h3></p>
+											<a class="image main"><img src="images/sql-img02.png" alt="" /></a>
+											<p>In this step I have used <code>OR</code> to specify login attempts from either 2022-05-09 or 2022-05-08.</p>
+										</article>
+								<!-- Step 3 -->
+										<article class="post featured">
+											<p><h3>Retrieve login attempts outside of Mexico</h3></p>
+											<a class="image main"><img src="images/sql-img03.png" alt="" /></a>
+											<p>I used <code>NOT</code> and <code>LIKE</code> to get all login attempts made outside of Mexico</p>
+										</article>
+								<!-- Step 4 -->
+										<article class="post featured">
+											<p><h3>Retrieve employees in Marketing</h3></p>
+											<a class="image main"><img src="images/sql-img04.png" alt="" /></a>
+											<p>In this step I used <code>SELECT *</code> <code>FROM employees</code> retrieve all employees matching any East office building in the marketing department. Using <code>east%</code> outputs all results with East offices.</p>
+										</article>
+								<!-- Step 5 -->
+										<article class="post featured">
+											<p><h3>Retrieve employees in Finance or Sales</h3></p>
+											<a class="image main"><img src="images/sql-img05.png" alt="" /></a>
+											<p>In this step I was tasked with filtering for all employees in the Finance <code>OR</code> Sales departments.</p>
+										</article>
+								<!-- Step 6 -->
+										<article class="post featured">
+											<p><h3>Retrieve all employees not in IT</h3></p>
+											<a class="image main"><img src="images/sql-img06.png" alt="" /></a>
+											<p>For this final task I used <code>WHERE NOT</code> to output all employees that are not categorized as being in the IT department.</p>
+										</article>
+								<!-- Summary -->
+										<article class="post featured">
+											<p><h3>Summary</h3></p>
+											<p>In this project I have demonstrated the ability to use <code>AND, OR, NOT, and LIKE</code> in SQL commands. I used <code>AND</code> to find login attempts after a certain time, and failed login attempts. I used <code>OR</code> to find logins on two different dates. I also used <code>OR</code> to find devices in finance or sales departments. I used <code>NOT</code> to find all login attempts outside of Mexico. Finally I used <code>LIKE</code> to find marketing devices in all East office locations. 
+												These commands are helpful to parse through data without using too much time, or missing things because of human errors. 
+												</p>
+										</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">xmagnum2001@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/xavier-gibson-6318512ba" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
