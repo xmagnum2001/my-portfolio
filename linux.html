@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Xavier's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Linux</h1>
+					</div>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Linux</a></li>
+							<li><a href="index.html"> Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/xavier-gibson-6318512ba" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="#">File Permissions In Linux</a></h2>
+									<p>The focus on this project is changing file and directory permissions for users in the Linux command line.</p>
+								</header>
+							</article>
+						<!-- Step 1 -->
+								<article class="post featured">
+									<P><h3>Check file and directory details</h3></P>
+									<a class="image main"><img src="images/linux-img01.png" alt="" /></a>
+									<p>The first command is changing directory with <code>cd</code> so that I am working from the <code>projects</code> directory. Then I used <code>ls -la</code> to list the files and their permissions from this directory including any hidden files shown with a period at the beginning of the file name. </p>
+								</article>
+						<!-- Step 2 -->
+								<article class="post featured">
+									<p><h3>Describe the permissions string</h3></p>
+									<a class="image main"><img src="images/linux-img02.png" alt="" /></a>
+									<p>For this example I will choose the file <code>project_k.txt</code>
+										Currently the permissions (seen in line 8) are set to: 
+										User: read, write<br />
+										Group: read, write<br />
+										Other: read<br />
+										The intended permissions should be: <br />
+										User: read, write<br />
+										Group: read<br />
+										Other: none</p>
+								</article>
+						<!-- Step 3 -->
+								<article class="post featured">
+									<p><h3>Change file permissions</h3></p>
+									<a class="image main"><img src="images/linux-img03.png" alt="" /></a>
+									<p>I used the <code>chmod</code> command to set the file permissions to the specified <code>group=read</code> only and <code>other=none</code>. Then I used <code>ls -la</code> to reprint after executing the previous command to show the updated permissions.</p>
+								</article>
+						<!-- Step 4 -->
+								<article class="post featured">
+									<p><h3>Change file permissions on a hidden file</h3></p>
+									<a class="image main"><img src="images/linux-img04.png" alt="" /></a>
+									<p>For this example, I am working with the hidden file <code>.project_x.txt</code><br />
+										The permissions needed to be updated from <code>user:read</code> to no permissions on this particular file.
+										<br />I have used <code>chmod</code> again, and then <code>ls -la</code> to reprint the permissions after the changes.</p>
+								</article>
+						<!-- Step 5 -->
+								<article class="post featured">
+									<p><h3>Change directory permissions</h3></p>
+									<a class="image main"><img src="images/linux-img05.png" alt="" /></a>
+									<p>This example is to update the permissions for the <code>drafts</code> directory so that <code>group</code> has read permissions only. 
+										I have used <code>chmod</code> and specified the directory of <code>drafts</code> so that it applies to the entire directory.</p>
+								</article>
+						<!-- Summary -->
+								<article class="post featured">
+									<p><h3>Summary</h3></p>
+									<p>I have shown the ability to navigate directories in the Linux command line and to change file and directory permissions, including hidden files.<br />
+										I have used the following commands:<br />
+										<code>cd</code> - change directory<br />
+										<code>ls -la</code> - list permissions of files, including hidden files<br />
+										<code>chmod</code> - change permissions of files and directories</p>
+
+
+
+
+
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">xmagnum2001@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/xavier-gibson-6318512ba" class="icon brands alt fa-linkedin"><span class="label">Linked in</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Xavier's portfolio</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
