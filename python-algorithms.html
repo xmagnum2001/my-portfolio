@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Xavier's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,11 +25,10 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Python Lab</a></li>
-							<li><a href="https://xmagnum2001.github.io/my-portfolio/"> Projects</a></li>
+							<li><a href="index.html"> Projects</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/xavier-gibson-6318512ba" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						</ul>
 					</nav>
 
@@ -39,13 +38,63 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2><a href="#">Project Name</a></h2>
-									<p>Project Description</p>
+									<h2>Python Algorithms for Automation</a></h2>
+									<p>In this lab, the goal was to create an algorithm that would: <br />
+										1. Check if a listed IP address from a text file called <code>allow_list</code> was also in a list of IP addresses to remove called <code>remove_list</code>. <br />
+										2. If the IP address was in <code>remove_list</code>, the algorithm would use the <code>.remove()</code> method to remove it from the allowed list. <br />
+										After running the algorithm and removing all the excluded IPs, then I used the <code>.join()</code> method to modify the list into string data. After that step, I overwrote the original list of allowed IP addresses so that it was current.</p>
 								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
 							</article>
+							<!-- Step 1 -->
+									<article class="post featured">
+										<P><h3>Open the file that contains the allow list</h3></P>
+										<a href="#" class="image main"><img src="images/python-img01.png" alt="" /></a>
+										<p>The first line of code is assigning a variable called <code>import_file</code> to the name of our allow list text file.<br />
+											The second line is assigning a variable <code>remove_list</code> to a list of IP addresses to remove.<br />
+											The final line is the <code>with</code> statement to open the allow list file.</p>
+									</article>
+							<!-- Step 2 -->
+									<article class="post featured">
+										<p><h3>Read the file contents</h3></p>
+										<a href="#" class="image main"><img src="images/python-img02.png" alt="" /></a>
+										<p>This step completes the <code>with</code> statement by reading the contents of the file. I have saved the contents in a variable called <code>ip_addresses</code> and used the print function.
+										</p>
+									</article>
+							<!-- Step 3 -->
+									<article class="post featured">
+										<p><h3>Convert the string into a list</h3></p>
+										<a href="#" class="image main"><img src="images/python-img03.png" alt="" /></a>
+										<p>I used the <code>.split()</code> method to separate the file into a list in Python. This allows me to work with the data in separated elements, and to create the algorithm in later steps. </p>
+									</article>
+							<!-- Step 4 -->
+									<article class="post featured">
+										<p><h3>Iterate through the remove list</h3></p>
+										<a href="#" class="image main"><img src="images/python-img04.png" alt="" /></a>
+										<p>I created a <code>for</code> loop with a loop variable called <code>element</code> which interates through the <code>ip_addresses</code> list. Then I have used the <code>print</code> function to show each element.</p>
+									</article>
+							<!-- Step 5 -->
+									<article class="post featured">
+										<p><h3>Remove IP addresses that are on the remove list</h3></p>
+										<a href="#" class="image main"><img src="images/python-img05.png" alt="" /></a>
+										<p>After starting the <code>for</code> loop, I created an <code>if</code> statement to check if each element is in the <code>remove_list</code>. If so, then Python executes the <code>.remove()</code> method. Finally I used the <code>print</code> function to display the list after removing all excluded IP addresses. The list went from 17 addresses to 13 after removing them. </p>
+									</article>
+							<!-- Step 6 -->
+									<article class="post featured">
+										<p><h3>Update the file with the revised list of IP addresses</h3></p>
+										<a href="#" class="image main"><img src="images/python-img06.png" alt="" /></a>
+										<p>Now I need to convert the list back into string data so that I can overwrite the original text file. I used the <code>.join()</code> method for this. Then I used another <code>with</code> statement to write in the file. When this is executed it overwrites the previous data with our updated <code>import_file</code> containing the allowed list inside <code>ip_addresses</code>. The last part of the code would allow me to read and display the file contents using <code>print(text)</code></p>
+									</article>
+							<!-- Summary -->
+									<article class="post featured">
+										<p><h3>Summary</h3></p>
+										<p>I used <code>with</code> statements to open, read, and write a text file. 
+											The <code>print</code> function was used to display the contents before and after editing. 
+											The <code>.split()</code> method was used to create a list that can be modified inside Python. 
+											I created an algorithm using a <code>for</code> loop and checking if each element was in <code>remove_list</code>, and if it was, I instructed to use the <code>.remove()</code> method. 
+											Finally I needed to overwrite the file with the updated data, which first required using <code>.join()</code> to convert the list back into string data. I used <code>.write()</code> to overwrite the file, and <code>.read()</code> so it could be displayed with the new data.</p>
+									</article>
 
-					</div>
+							</div>		
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -57,8 +106,7 @@
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/xavier-gibson-6318512ba" class="icon brands alt fa-linkedin"><span class="label">Linked in</span></a></li>
 								</ul>
 							</section>
 						</section>
@@ -66,7 +114,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Xavier's portfolio</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
